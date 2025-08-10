@@ -1,0 +1,90 @@
+body{
+    text-align:center;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid{
+    height: 360px;
+    width: 360px;
+    position: fixed;
+    display:flex;
+    flex-wrap: wrap;
+    border: 2px solid rgb(255, 255, 255);
+    /* align-items: center;
+    justify-content: center; */
+    margin: auto;
+    /* margin-top: 25px; */
+    margin-left: 36%;
+}
+
+.key{
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    width: 100px;
+    /* border-radius: 20px; */
+    margin: 10px 10px;
+}
+
+.key:hover{
+    box-shadow: 2px 2px 5px #a0a0a0;
+}
+
+h1{
+    font-family: "Bitcount Prop Double", system-ui;
+    font-size: 6rem;
+    color: #00ff9f;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top:0;
+    animation: flicker 1.5s infinite;
+}
+
+h2{
+    font-family: "Bitcount Prop Double", system-ui;
+    font-weight: 500;
+    color: white;
+    font-size: 1.75rem;
+}
+
+h2 {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(20) infinite;
+  position: relative;
+}
+
+.flash{
+    background-color: #11ffa4;
+    /* background-size: contain;      
+    background-position: center;  
+    background-repeat: no-repeat;  */
+}
+
+.rules{
+    top: 2rem;
+    right: 2rem;
+    position: fixed;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@keyframes flicker {
+  0%, 100% { text-shadow: 0 0 5px #00ff9f; }
+  10% { text-shadow: 0 0 10px #00ff9f; }
+  20% { text-shadow: 0 0 5px #00ff9f; }
+  30% { text-shadow: 0 0 1px #00ff9f; }
+  40% { text-shadow: 0 0 5px #00ff9f; }
+  50% { text-shadow: 0 0 1px #00ff9f; }
+  60% { text-shadow: 0 0 10px #00ff9f; }
+  70% { text-shadow: 0 0 4px #00ff9f; }
+  80% { text-shadow: 0 0 1px #00ff9f; }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
