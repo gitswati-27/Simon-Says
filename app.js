@@ -6,12 +6,16 @@ let keys = ['key1', 'key2', 'key3', 'key4', 'key5', 'key6', 'key7', 'key8', 'key
 let acceptingInput = false;
 let started = false;
 let level = 0;
+let score = document.querySelector('#score');
+let highScore = 0;
 
 let h2 = document.querySelector("h2");
+let glass = document.querySelector(".tablet");
 
 document.addEventListener("keypress", function(){
     if (started==false){
         console.log("Game has started!");
+        glass.style.height = '575px';
         started = true;
         levelUp();
     }
@@ -82,16 +86,25 @@ function keyPress(event){
     checkAns(userSeq,gameSeq,curSize);
 }
 
+function flashAll(keys){
+    for(key of keys){
+        let btn = document.querySelector(`#${key}`);
+        Flash(btn);
+    }
+}
+
 function checkAns(userSeq,gameSeq,curSize){
     if (userSeq[curSize] !== gameSeq[curSize]) {
         acceptingInput = false;
-        //document.body.classList.add("glitch");
-        h2.innerHTML = `Game Over! Your score was <b>${level}</b>. <br> Press any key to start.`;
-        //setTimeout(() => {
-        //document.body.classList.remove("glitch");
-        //}, 600);
-        document.body.style.backgroundColor = "red";
-        setTimeout(() => document.body.style.backgroundColor = "black", 100);
+        glass.style.height = '605px';
+        flashAll(keys);
+        h2.innerHTML = `Game Over! Your score was <span style="color: red">${level-1}</span>. <br> Press any key to start.`;
+        if(level-1>highScore){
+            highScore = level-1;
+            score.innerHTML = `Highest Score : ${highScore}`;
+        }
+        document.body.style.background = 'url("bgrev.jpg") center center / cover no-repeat';
+        setTimeout(() => document.body.style.background = 'url("bg4.jpg") center center / cover no-repeat', 500);
         reset();
         return;
     }

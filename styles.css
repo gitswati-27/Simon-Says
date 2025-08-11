@@ -1,22 +1,48 @@
 body{
     text-align:center;
-    background-color: black;
-    position: relative;
-    overflow: hidden;
+    background: url("bg4.jpg");
+    background-size:cover;      
+    background-position: center;  
+    background-repeat: no-repeat;  
+}
+
+.glass{
+    pointer-events: none;
+}
+
+.tablet {
+    pointer-events: auto;
+    background: linear-gradient(
+        to left,
+        rgba(50, 50, 50, 0.3),
+        rgba(50, 50, 50, 0.5),
+        rgba(50, 50, 50, 0.3)
+    );
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-clip: padding-box;
+    width: 95%;
+    height: 575px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;   
 }
 
 .grid{
     height: 360px;
     width: 360px;
-    position: fixed;
+    /* position: fixed; */
     display:flex;
     flex-wrap: wrap;
     border: 2px solid rgb(255, 255, 255);
-    /* align-items: center;
-    justify-content: center; */
-    margin: auto;
+    /* align-items: center; */
+    /* justify-content: center;
+    margin: auto; */
     /* margin-top: 25px; */
-    margin-left: 36%;
+    /* margin-left: 36%; */
 }
 
 .key{
@@ -25,6 +51,7 @@ body{
     width: 100px;
     /* border-radius: 20px; */
     margin: 10px 10px;
+    cursor: pointer;
 }
 
 .key:hover{
@@ -34,7 +61,7 @@ body{
 h1{
     font-family: "Bitcount Prop Double", system-ui;
     font-size: 6rem;
-    color: #00ff9f;
+    color: red;
     font-weight: 500;
     margin-bottom: 0;
     margin-top:0;
@@ -52,12 +79,12 @@ h2 {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 2s steps(20) infinite;
+  animation: typing 5s steps(20) infinite;
   position: relative;
 }
 
 .flash{
-    background-color: #11ffa4;
+    background-color: red;
     /* background-size: contain;      
     background-position: center;  
     background-repeat: no-repeat;  */
@@ -70,18 +97,27 @@ h2 {
     border-radius: 20px;
     font-size: 1rem;
     cursor: pointer;
+    background: none;
+    color: white;
+    width: 8rem;
+    height: 2.5rem;
+}
+
+#score{
+    font-size: 1rem;
+    color: white;
 }
 
 @keyframes flicker {
-  0%, 100% { text-shadow: 0 0 5px #00ff9f; }
-  10% { text-shadow: 0 0 10px #00ff9f; }
-  20% { text-shadow: 0 0 5px #00ff9f; }
-  30% { text-shadow: 0 0 1px #00ff9f; }
-  40% { text-shadow: 0 0 5px #00ff9f; }
-  50% { text-shadow: 0 0 1px #00ff9f; }
-  60% { text-shadow: 0 0 10px #00ff9f; }
-  70% { text-shadow: 0 0 4px #00ff9f; }
-  80% { text-shadow: 0 0 1px #00ff9f; }
+  0%, 100% { text-shadow: 0 0 5px red ; }
+  10% { text-shadow: 0 0 10px red; }
+  20% { text-shadow: 0 0 5px red; }
+  30% { text-shadow: 0 0 1px red; }
+  40% { text-shadow: 0 0 5px red; }
+  50% { text-shadow: 0 0 1px red; }
+  60% { text-shadow: 0 0 10px red; }
+  70% { text-shadow: 0 0 4px red; }
+  80% { text-shadow: 0 0 1px red; }
 }
 
 @keyframes typing {

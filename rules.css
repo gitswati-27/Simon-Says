@@ -1,0 +1,55 @@
+body{
+    text-align:left;
+    background: url("bg4.jpg");
+    background-size:cover;      
+    background-position: center;  
+    background-repeat: no-repeat;
+    font-family: "Libertinus Serif", serif;
+}
+
+.tablet {
+    background: linear-gradient(
+        to left,
+        rgba(50, 50, 50, 0.3),
+        rgba(50, 50, 50, 0.5),
+        rgba(50, 50, 50, 0.3)
+    );
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-clip: padding-box;
+    width: 95%;
+    height: 575px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;  */
+    align-items: left;   
+}
+
+h1{
+    font-size: 4rem;
+    color: red;
+    font-weight: 800;
+    margin-left: 1rem;
+}
+
+ul{
+    color: white;
+    font-size: 1.5rem;
+}
+
+p{
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+a{
+    color: red;
+}
+
+#ps{
+    margin-top: 5rem;
+    font-size: 0.75rem;
+}
