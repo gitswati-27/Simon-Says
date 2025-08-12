@@ -4,14 +4,10 @@ body{
     background-size:cover;      
     background-position: center;  
     background-repeat: no-repeat;  
-}
-
-.glass{
-    pointer-events: none;
+    height: 100vh;
 }
 
 .tablet {
-    pointer-events: auto;
     background: linear-gradient(
         to left,
         rgba(50, 50, 50, 0.3),
@@ -23,7 +19,7 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-clip: padding-box;
     width: 95%;
-    height: 575px;
+    height: 97vh;
     margin: auto;
     display: flex;
     flex-direction: column;
