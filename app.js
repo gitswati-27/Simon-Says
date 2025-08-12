@@ -59,6 +59,19 @@ function Flash(btn){
     });
 }
 
+function userFlash(btn){
+    return new Promise((resolve,reject)=>{
+        btn.classList.add("userFlash");
+        setTimeout(function(){
+            btn.classList.remove("userFlash");
+            resolve();
+        },250);
+        
+    });
+}
+
+
+
 async function gameSeqFlash(gameSeq){
     for (key of gameSeq){
         let randBtn = document.querySelector(`#${key}`);
@@ -70,7 +83,7 @@ async function gameSeqFlash(gameSeq){
 function keyPress(event){
     if (!acceptingInput) return; 
     let key = this;
-    Flash(key);
+    userFlash(key);
     //let clicks = 1;
     //userSeq = [];
     //while(clicks != gameSeq.length){

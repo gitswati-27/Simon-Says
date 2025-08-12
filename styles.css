@@ -86,6 +86,10 @@ h2 {
     background-repeat: no-repeat;  */
 }
 
+.userFlash{
+    background-color: rgb(64, 255, 0);
+}
+
 .rules{
     top: 2rem;
     right: 2rem;
@@ -97,6 +101,12 @@ h2 {
     color: white;
     width: 8rem;
     height: 2.5rem;
+    border: none;
+    opacity: 0.8;
+}
+
+button i{
+    margin-left: 0.3rem;
 }
 
 #score{
